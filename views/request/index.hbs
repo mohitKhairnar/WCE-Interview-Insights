@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Interview-Insights</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/request/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    {{#if msg}}
+    <script>
+        window.alert('{{msg}}')
+    </script>
+
+    {{/if}}
+      <nav>
+    <div class="header logo">
+       <img src="/images/welcome/interview.png" alt="Logo" />
+    <a href="/home" class="webName"><h2 style="font-weight:900">Interview Insights</h2></a>
+    </div>
+    <div class="navButton">
+      <a href="/articles/new" class="articleButtons">Write article</a>
+      <a href="/request" class="articleButtons" >Request article</a>
+    </div>
+  </nav>
+    
+    <div class="fill-container">
+        <form action="/request" method="POST">
+                <div class="info-box">
+                    <div class="form-headline">
+                        <h2>Request an Article</h2>
+                    </div>
+                    <div class="contact-form">
+
+                        <div class="companyUser">
+                            <div class="form-box">
+                            <h4>Your Name</h4>
+                            <input type="text" name="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-box">
+                            <h4>Email</h4>
+                            <input type="email" name="email" placeholder="Enter email" >
+                        </div>
+                        </div>
+                        <div class="companyUser">
+                            <div class="form-box">
+                            <h4>Senior Name</h4>
+                            <input type="text" name="senior" placeholder="Enter senior name">
+                        </div>
+                        <div class="form-box">
+                            <h4>Senior Social Link</h4>
+                            <input type="text" name="link" placeholder="Enter senior's social link" value={{article.name}}>
+                        </div>
+                        </div>
+                        <div class="companyUser">
+                            <div class="form-box">
+                            <h4>Company Name</h4>
+                            <input type="text" name="company" placeholder="Enter Company Name">
+                        </div>
+                        <div class="form-box">
+                            <h4>Personal Note</h4>
+                            <input type="text" name="note" placeholder="Enter personal note" >
+                        </div>
+                        </div>
+
+                        <div class="form-box1">
+                            <button type="submit" class="submit articleButtons">Done</button>
+                        </div>
+                    </div>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>
